@@ -50,3 +50,34 @@ def calculate_operations(a,b):
 s,t = map(int, input("1st no.,2nd no. :").split())
 calculate_operations(s,t)
 
+# Function to calculate the total shopping bill, apply a default 5% discount or a custom 15% discount, and return the final payable amount.
+def shopping_bill(item_price, quantity, discount=5):
+    total_price = item_price * quantity
+    discount_amount = total_price * discount / 100
+    final_amount = total_price - discount_amount
+    print("Total Price:", total_price)
+    print("Discount Amount:", discount_amount)
+    print("Final Payable Amount:", final_amount)
+    return final_amount
+print("With 5% Discount:")
+shopping_bill(2000, 3)
+print("\nWith 15% Discount:")
+shopping_bill(2000, 3, 15)
+
+# Global Variables
+
+# This function adds a specified amount of money to a global balance variable and returns the updated balance. 
+balance=10000
+def add(money):
+    global balance
+    balance+=money
+    return balance
+print(add(2000))
+
+# This function keeps track of how many times it has been called by using a global variable count. 
+count=0
+def update():
+    global count
+    count+=1
+    return
+print(update())
