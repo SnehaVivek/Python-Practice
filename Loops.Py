@@ -27,21 +27,15 @@ for i in range(3):
         print("It's a tie!")
 
 
-
-
+# Rock, Paper, Scissors Game
 import random
-
 choices_answer = ["Rock","Paper","Scissors"]
-
 player_score =0
 computer_score =0
-
 for i in range(5):
-
     player = input("Enter your choice ")
     computer = random.choice(choices_answer)
     print("Player value ",player, "Computer value ",computer)
-
     if player ==  computer:
         print("Tie")
     elif ((player == "Rock" and computer == "Scissors") or (player == "Paper" and computer == "Rock") or (player == "Scissors" and computer == "Paper")):
@@ -50,29 +44,12 @@ for i in range(5):
     else:
         computer_score +=1
         print("Computer wins")
-
 if player_score > computer_score:
     print("Player wins the game")
 elif (player_score == computer_score):
     print("Tie")
 else:
     print("Computer  wins the game")
-
-
-s = "Data Science is the best"
-
-print(s.upper())
-print(s.lower())
-
-print(s.title())
-print(s.strip())
-
-print(s.replace('a','a_'))
-print(s.split())
-
-
-print(s.count('a'))
-print(s.startswith('D'))
 
 
 # Check how many vowels are in a string = your name
@@ -93,36 +70,9 @@ if n==n[::-1]:
 else:
     print("Not a palindrome")
 
-# Insert - to insert value at any position
 
-l1=[1,2,3,4,5]
-l1.insert(1,6)
-print(l1)
-
-
-# extend
-l1.append(2)
-l1.append(9)
-print(l1)
-print(l1[len(l1)-1])
-
-
-l1.extend([8,10])
-print(l1)
-print(l1[len(l1)-1])
-
-# Append - add at last
-l1.append(2)
-l1.append(3)
-l1.append(4)
-
-for i in range(20,30):
-    l1.append(i)
-
-print(l1)
-
-#   Create a list of 10 numbers and use a for loop to:
-#Print every element.
-#Print only even numbers.
-#Print only odd numbers.
-#Calculate the sum of all elements.
+# Create a list of 10 numbers and use a for loop to:
+# Print every element.
+# Print only even numbers.
+# Print only odd numbers.
+# Calculate the sum of all elements.
