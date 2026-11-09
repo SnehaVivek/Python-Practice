@@ -102,3 +102,66 @@ print(n[0:3,1:4])
 # Print all rows and all colums
 print(n[:,:])
 
+# Generate an array of random numbers and also reshape it
+p=np.arange(0,18).reshape(3,3)
+q=np.arange(20,38).reshape(3,3)
+print(p)
+print(q)
+
+
+# Mathematical operations on arrays
+
+# Addition of two arrays
+print("Addition of two arrays")
+print(p+q)
+o=np.add(p,q)
+print(o)
+
+# Subtraction of two arrays
+print("Subtraction of two arrays")
+print(p-q)
+r=np.subtract(p,q)
+print(r)
+
+# Multiplication of two arrays
+print("Multiplication of two arrays")
+print(p*q)
+print(np.multiply(p,q))
+
+# Division of two arrays
+print("Division of two arrays")
+print(p/q)
+print(np.divide(p,q))
+
+# Matrix multiplication of two arrays
+print("Matrix multiplication of two arrays")
+print(p@q)
+print(np.dot(p,q))
+
+# Maximum and minimum element present in the array
+print("Maximum element in the array:")
+print(np.max(p))
+print("Minimum element in the array:")
+print(np.min(p))
+
+# Index of the maximum element in the array
+print("Index of the maximum element in the array:")
+print(np.argmax(p))
+
+# Sum of all the emements in the array
+print("Sum of all the elements in the array:")
+print(np.sum(p))
+print("Rows",np.sum(p, axis=0)) # Sum of each column
+print("Columns",np.sum(p, axis=1)) # Sum of each row
+
+# Mean of all the elements in the array
+print("Mean of all the elements in the array:")
+print(np.mean(p))
+
+# Standard deviation of all the elements in the array
+print("Standard deviation of all the elements in the array:")
+print(np.std(q))
+
+# Square root of all the elements in the array
+print("Square root of all the elements in the array:")
+print(np.sqrt(p))
