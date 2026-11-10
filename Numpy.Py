@@ -82,6 +82,7 @@ print(c)
 x=x.ravel()
 print(x)
 
+
 # Slicing an array
 m=np.arange(1,51)
 n=m.reshape(10,5)
@@ -103,8 +104,8 @@ print(n[0:3,1:4])
 print(n[:,:])
 
 # Generate an array of random numbers and also reshape it
-p=np.arange(0,18).reshape(3,3)
-q=np.arange(20,38).reshape(3,3)
+p = np.arange(0,9).reshape(3,3)
+q = np.arange(20,29).reshape(3,3)
 print(p)
 print(q)
 
@@ -165,3 +166,76 @@ print(np.std(q))
 # Square root of all the elements in the array
 print("Square root of all the elements in the array:")
 print(np.sqrt(p))
+
+
+# Random fuctions in Numpy
+
+# Random Integer
+print("Random Integer")
+s=np.random.random(1)
+print(s)
+
+# Random Integer between 1 and 20
+print("Random Integer between 1 and 20")
+print(np.random.randint(1,20))
+
+# Two dimensional array of random values
+print("Two dimensional array of random values")
+t=np.random.random((3,3))
+print(t)
+
+# Random integer between 1 and 10 with shape (2,3)
+print("Random values from a normal distribution")
+print(np.random.randint(1,10,(2,3)))
+
+# 3D array of random values
+print("3D array of random values")
+u=np.random.randint(1,10,(2,2,3))
+
+# Random values from a uniform distribution over [0, 1)
+print("Random values from a uniform distribution over [0, 1)")
+print(np.random.rand(2,2))
+
+# Pick a random number from an array provided using choice() function
+new_random_array = np.arange(1,10)
+print(new_random_array)
+print("Pick a random number from an array provided using choice() function")
+choice = np.random.choice(new_random_array)
+print(choice)
+
+
+# Numpy String Operations
+
+# String array
+s1 = "My name is Sneha Vivek"
+s2 = "I am learning Numpy module in Python"
+
+# Concatenate two strings
+print("Concatenate two strings")
+concat = np.char.add(s1,s2)
+print(concat)
+
+# Uppercase and lowercase of the strings
+uppercase = np.char.upper(s1)
+print("Uppercase", uppercase)
+lowercase = np.char.lower(s2)
+print("Lowercase", lowercase)
+
+# Split the string into words
+print("Split the string into words")
+print(np.char.split(s1))
+
+# Split the line into words
+print("Split the line into words")
+s3= "My name is \n Sneha Vivek"
+print(np.char.splitlines(s3))
+
+# Replace a substring in the string
+print("Replace a substring in the string")
+replace_word =np.char.replace(s1,"name","surname")
+print(replace_word)
+
+# String centre with "*" as fill character
+print("String centre with '*' as fill character")
+centre_string = np.char.center("Hello",20,"*")
+print(centre_string)
