@@ -109,3 +109,28 @@ o3=o.dropna(how='all')
 o4=o.dropna(inplace = True)
 print(o4)
 
+
+# Filling the Null Values 
+
+# Fill empty cell with zero
+o5=o.fillna(0)
+
+# Fill empty cells with values 
+o6=o.fillna(12)
+
+# Filling values for different columns
+o7=o.fillna({'Physics':'none','Chemistry':0,'Maths':30})
+
+# Foward fill - filling values with previous values
+o8=o.ffill(axis=0)     # previous rowise
+o9=o.ffill(axis=1)     # previous columnwise
+
+# Backward fill - filling values with later values
+o10=o.bfill()
+
+# Fill the value with the mean of the complete row
+o11=o['Physics'].fillna(value=o['Physics'].mean())   # showing only physics column and filling average value 
+
+# To replace the original data 
+o12=o.fillna(0, inplace = True)
+
