@@ -134,3 +134,13 @@ o11=o['Physics'].fillna(value=o['Physics'].mean())   # showing only physics colu
 # To replace the original data 
 o12=o.fillna(0, inplace = True)
 
+# Replace the values 
+o13=o.replace(to_replace=26, value=30)
+o14=o.replace(34,1000)
+o15=o.replace(to_replace=[50,51,52], value='A')
+o16=o.replace(to_replace=[50,51,52],value=['a','b','c'])
+
+# All the string value should be replaced with zero
+o17=o.replace('[A-Za-z]',0)
+o18=o.replace('[A-Za-z]',0, regex=True)
+
